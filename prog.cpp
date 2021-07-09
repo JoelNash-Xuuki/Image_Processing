@@ -11,7 +11,9 @@ try {
    InitializeMagick(*argv);
    Image image;
    image.read("/home/joel/imagefiles/_MG_3929.JPG");
-   image.chop("500x500");
+   RedChannel red(image);
+
+
    image.write("myImage.jpg");
    }
    catch( exception & error_ ) 
